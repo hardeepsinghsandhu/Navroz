@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <style>
+       .button{
+        box-shadow: 5px 5px gray;
+        width: fit-content;
+        margin: 20% auto;
+        padding: 10px;
+        background-color: black;
+        color: white;
+       }
+
+       .button:hover {
+        background-color: grey;
+        box-shadow: 5px 5px black;
+        cursor: pointer;
+       }
+
+       .button:active{
+        background-color:blanchedalmond;
+        color: black;
+       }
+
+       .button::selection {
+            color: none;
+            background: none;
+        }
+
+    </style>
+    
+    <head>
+        <title>Congratulations!!!</title>
+    </head>
+    
+    <body>
+        <div class="button"> Click if you are glad Navroz broke up!</div>
+    </body>
+
+    <script>
+        
+        let x= document.querySelector('.button');
+        x.onclick= function clickAndChange(){
+            let redColor=Math.floor(Math.random()*256);
+            let greenColor=Math.floor(Math.random()*256);
+            let blueColor=Math.floor(Math.random()*256);
+            document.body.style.backgroundColor=`rgb(${redColor},${greenColor},${blueColor})`;
+        }; 
+        
+    </script>
+</html>
